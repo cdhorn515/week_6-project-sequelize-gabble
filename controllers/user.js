@@ -47,6 +47,8 @@ module.exports = {
         req.session.username = user.username;
         req.session.userId = user.id;
         console.log('login successful');
+        console.log(req.session.userId);
+        console.log(req.session.username);
         res.redirect('/gabble');
       } else {
         res.redirect('/login');
