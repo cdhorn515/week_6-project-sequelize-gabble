@@ -1,0 +1,24 @@
+{
+  "name": "week_6-project-sequelize-gabble",
+  "version": "1.0.0",
+  "description": "chat site using sequelize",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sequelize"
+  ],
+  "author": "Christina Cornell",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-session": "^1.15.3",
+    "express-validator": "^3.2.0",
+    "mustache-express": "^1.2.5",
+    "path": "^0.12.7",
+    "pg": "^6.4.0",
+    "sequelize": "^4.2.1"
+  }
+}
