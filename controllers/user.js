@@ -45,10 +45,12 @@ module.exports = {
       if (password === user.password) {
         req.session.user = user;
         req.session.username = user.username;
+        req.session.password = user.password;
         req.session.userId = user.id;
-        console.log('login successful');
-        console.log(req.session.userId);
-        console.log(req.session.username);
+        // console.log('login successful, userId= ', req.session.userId);
+        // console.log("username and password from db: ", req.session.username, req.session.password);
+        //returns entire object of user created
+        console.log('user is: ', req.session.user);
         res.redirect('/gabble');
       } else {
         res.redirect('/login');
