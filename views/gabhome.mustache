@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>  <head>
+    <meta charset="utf-8">
+    <title>Gab Home</title>
+  </head>
+  <body>
+
+{{#gabs}}
+<fieldset>
+<form class="" action="index.html" method="post" id="{{id}}">
+  <p>{{userId.username}}: {{text}}</p>
+  <p>{{createdAt}}</p>
+</form>
+</fieldset>
+{{/gabs}}

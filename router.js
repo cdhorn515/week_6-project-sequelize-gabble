@@ -16,8 +16,8 @@ router.post('/signup', userController.createUser);
 router.get('/login', userController.loginLanding);
 router.post('/login', userController.login);
 
-router.get('/gabble', gabbleController.landing);
-router.post('/gabble', gabbleController.createPost);
+router.get('/gabhome', gabbleController.landing);
+router.post('/creategab', gabbleController.createPost);
 
 
 };

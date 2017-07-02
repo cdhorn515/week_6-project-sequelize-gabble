@@ -5,11 +5,9 @@ const models = require('../models'),
 
 module.exports = {
 landing: function (req, res){
-    console.log('userId, username, password ', req.session.userId, req.session.username, req.session.password);
     models.gab.findAll().then(function(gabs){
-      console.log(gabs[1].text);
+      res.render('gabhome', {gabs: gabs});
     });
-  res.render('gabble');
 },
 createPost: function (req, res){
     // if(result.notEmpty()) {
@@ -21,9 +19,8 @@ createPost: function (req, res){
       var context = {
         message: "uploaded new gab"
       };
-      res.render('gabble', context);
+      res.render('gabhome', context);
     });
   // }
 
-}
-};
+}};

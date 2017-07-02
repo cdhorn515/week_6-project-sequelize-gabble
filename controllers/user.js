@@ -21,7 +21,7 @@ module.exports = {
         }).then(function(newUser) {
           console.log('signed up');
           req.session.userId = newUser.id;
-          res.redirect('/gabble');
+          res.redirect('/gabhome');
         });
       }
     });
@@ -51,7 +51,7 @@ module.exports = {
         // console.log("username and password from db: ", req.session.username, req.session.password);
         //returns entire object of user created
         console.log('user is: ', req.session.user);
-        res.redirect('/gabble');
+        res.redirect('/gabhome');
       } else {
         res.redirect('/login');
       }
