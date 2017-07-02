@@ -5,7 +5,15 @@ const models = require('../models'),
 
 module.exports = {
 landing: function (req, res){
-    models.gab.findAll().then(function(gabs){
+    models.gab.findAll({
+      include: [
+        {
+          model: models.user,
+          as: 'user'
+        }
+      ]
+    }).then(function(gabs){
+      console.log(gabs);
       res.render('gabhome', {gabs: gabs});
     });
 },
