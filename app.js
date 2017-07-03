@@ -38,7 +38,7 @@ app.use(session({
   saveUninitialized: false
 }));
 
-// app.use(middleware.checkIfUser);
+app.use(middleware.checkIfUser);
 // app.use(middleware.checkUserId);
 
 //call
